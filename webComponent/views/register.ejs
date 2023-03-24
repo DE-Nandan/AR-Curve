@@ -1,0 +1,38 @@
+<form action="/register" method="post">
+    <div>
+		<% if (messages.error) { %>
+			<%= messages.error %>
+		  <% } %>
+		<h1>Register</h1>
+	</div>
+	<div class="form-group">
+		<label>Email: </label>
+		<input 
+			type="email" 
+			name="email" 
+			id="email" 
+			placeholder="Enter your Email" 
+			required />
+	</div>
+	<div class="form-group">
+		<label>Username: </label>
+		<input 
+			type="text" 
+			name="username" 
+			id="username" 
+			placeholder="Enter your Username" 
+			required />
+	</div>
+	<div class="form-group">
+		<label>RPassword:</label>
+		<input 
+			type="password" 
+			name="password" 
+			id="password"
+			placeholder="Enter your Password" 
+			required />
+	</div>
+	<div>
+		<input type="submit" value="Register" />
+	</div>
+</form>
