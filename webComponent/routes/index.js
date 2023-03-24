@@ -11,4 +11,4 @@ router.get('/', isLoggedIn, (req, res) => {
 	res.render("index", { title: req.user.username });
 });
 
-module.exports = router
+module.exports = router;
