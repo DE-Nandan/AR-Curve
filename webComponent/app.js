@@ -17,7 +17,7 @@ const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
 const melodyRouter = require('./routes/melody');
 const exploreRouter = require('./routes/explore');
-mongoose.connect("mongodb://localhost:27017/node-auth-yt", {
+mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
@@ -55,6 +55,7 @@ passport.deserializeUser(function (id, done) {
 });
 
 passport.use(new localStrategy(function (username, password, done) {
+	console.log("passport")
 	User.findOne({ username: username }, function (err, user) {
 		if (err) return done(err);
 		if (!user) return done(null, false, { message: 'Incorrect username.' });
