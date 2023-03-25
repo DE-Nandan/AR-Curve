@@ -15,6 +15,8 @@ const {isLoggedOut} = require('./middleware/logCheck')
 const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
+const melodyRouter = require('./routes/melody');
+const exploreRouter = require('./routes/explore');
 mongoose.connect("mongodb://localhost:27017/node-auth-yt", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
@@ -69,6 +71,8 @@ passport.use(new localStrategy(function (username, password, done) {
 app.use('/' ,dashboardRouter);
 app.use('/register' ,registerRouter);
 app.use('/login' ,loginRouter);
+app.use('/melody' ,melodyRouter);
+app.use('/explore' ,exploreRouter);
 
 
 app.get('/logout', function (req, res) {
