@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+/* ------------------navbar -----------------*/
+.nav-link {
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+.container-fluid {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* ------------------navbar -----------------*/
+
+/* ----------content------------- */
+.image {
+    height: 40rem;
+}
+
+.content {
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 4rem 0rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.image-1 {
+    height: 26rem;
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+
+
+}
+
+.cont-2 {
+    display: none;
+}
+
+@media(max-width:988px) {
+    .cont .d-flex {
+        flex-direction: column;
+    }
+
+    .cont-1 {
+        display: none;
+    }
+
+    .cont-2 {
+        display: flex;
+    }
+
+    .cont-2 .d-flex {
+        flex-direction: column;
+    }
+}
+
+/* @media(max-width:768px){
+    .cont .d-flex{
+        flex-direction: column;
+    }
+    .cont-2 .d-flex{
+        flex-direction: column;
+    }
+} */
+/* ----------content------------- */
+.last {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: rgb(31, 31, 31);
+}
+
+.last ul {
+    display: flex;
+    font-size: 11px;
+    padding-top: 4px;
+}
+
+.last-item {
+    padding: 0 15px;
+}
+
+.text-center {
+    color: white !important;
+}
+.main {
+    display: flex;
+    position: relative;
+    top: 120px;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    height: 1;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 2;
+}
+
+.main-head {
+    font-size: 2.8rem;
+    max-width: 600px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-btwn {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 1.8rem;
+
+}
+
+.main-end {
+    font-size: 1.4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 4px 0;
+}
+.dhimka{
+    background: url(../static/back1.webp) no-repeat center center;
+
+}
