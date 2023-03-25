@@ -18,6 +18,9 @@ const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
 const melodyRouter = require('./routes/melody');
 const exploreRouter = require('./routes/explore');
+const magicRouter = require('./routes/magic');
+const startRouter = require('./routes/start');
+const learningRouter = require('./routes/learning');
 
 mongoose.connect(process.env.db, {
 	useNewUrlParser: true,
@@ -76,7 +79,9 @@ app.use('/register' ,registerRouter);
 app.use('/login' ,loginRouter);
 app.use('/melody' ,melodyRouter);
 app.use('/explore' ,exploreRouter);
-
+app.use('/magic' ,magicRouter);
+app.use('/start' ,startRouter);
+app.use('/learning' ,learningRouter);
 
 app.get('/logout', function (req, res) {
 	req.logout();

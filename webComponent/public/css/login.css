@@ -42,8 +42,18 @@ body{
     margin-left: 30px;
     margin-bottom: 20px;
 }
-input[type="text"]{
-    color:#fff;
+input[type=text]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder{
+    color:#7b7b7b;
+}
+input:not(:placeholder-shown) {
+    background-color: #7b7b7b;
+    color: #fff;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
+    color: #fff;
+}
+input[type=text]:required:valid, input[type=email]:required:valid, input[type=password]:required:valid{
+    color: #fff;
 }
 .left_part, .right_part{
     width: 450px; /* Half of the parent */
