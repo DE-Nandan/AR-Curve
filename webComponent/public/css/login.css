@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    font-family: 'Lexend', sans-serif;
+}
+body{
+    background-color: rgb(20, 20, 20);
+    color:#fff;
+}
+.dark_mode{
+    color:#fff;
+}
+.main_container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#sign_up, #sign_in{
+    background-color: rgb(31, 31, 31);
+    position: fixed;
+    border-radius: 3rem;
+    left: 250px;
+    width: 900px;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.3));
+    box-shadow: 5px 5px 5px 3px rgba(0,0,0,0.3);
+}
+#sign_up{
+    display: flex;
+}
+#sign_in{
+    display: none;
+}
+.inputg{
+    width: 300px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+/* .inputg > input, input[type=text]{
+    color: #fff;
+    background-color: rgb(31, 31, 31);
+} */
+.left_part, .right_part{
+    width: 450px; /* Half of the parent */
+    height: inherit;
+    overflow: hidden;
+}
+#sign_in > .left_part{
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+#sign_up > .left_part{
+    padding-left: 40px;
+}
+#sign_in > .right_part{
+    padding-right: 40px;
+}
+#sign_up > .right_part{
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+#sign_up > .right_part > img{
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+#sign_in > .left_part > img{
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
