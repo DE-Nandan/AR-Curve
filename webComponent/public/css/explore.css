@@ -1,15 +1,11 @@
 .explore_container{
     color:#c5c5c5;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
     height: 100%;
     padding:50px;
-    background-image: url('/assets/back1.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 .container_child{
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(10, 10, 10, 0.9);    
     border-radius: 2rem;
     filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.3));
     box-shadow: 5px 5px 5px 3px rgba(0,0,0,0.3);
@@ -30,4 +26,27 @@
 }
 h2{
     text-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+}
+.img-fluid {
+    background-image: url('/assets/back1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+.main-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 283px; 
+    color:#fff;
+}
+.scanit{
+    width: 50px;
+    background-color: blue;
 }

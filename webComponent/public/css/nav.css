@@ -1,5 +1,8 @@
 .aright{
     position: fixed;
-    right:0px;
+    right:50px;
     display: flex;
+}
+.container-fluid > img{
+    width: 40px;
 }

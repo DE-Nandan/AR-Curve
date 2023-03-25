@@ -9,7 +9,7 @@ const passport			= require('passport');
 
 router.get('/', isLoggedIn,async (req, res) => {
 	
-    res.render('melody',{title :"melody"});
+    res.render('magic',{title :"magic"});
 
 });
 
