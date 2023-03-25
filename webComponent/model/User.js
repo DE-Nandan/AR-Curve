@@ -15,7 +15,9 @@ const UserSchema = new mongoose.Schema({
 		required: true,
 		unique:true
 	},
-	
+	favorites: [{
+        whatHaveYou: Number,
+    }]
 },
 {
     // otherwise it would be dynmic based on name of model

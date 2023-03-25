@@ -4,7 +4,14 @@
 </div>
 
 <div>
-   
-      <img height="150" width="100" src="<%= image.coverImagePath %>" >
+	<button>
+		<script>
+			if(!use.favourite.find()==null) 
+				usr.favourite.add(image.sno); 
+			else 
+				usr.favourite.remove(image.sno);
+		</script>
+		Favourite
+	</button>
    
 </div>
