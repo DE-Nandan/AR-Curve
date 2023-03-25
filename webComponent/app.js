@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express			= require('express');
 const session			= require('express-session');
 const hbs				= require('express-handlebars');
@@ -15,7 +16,7 @@ const {isLoggedOut} = require('./middleware/logCheck')
 const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
-mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect(process.env.db, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
