@@ -1,11 +1,15 @@
 .explore_container{
-    color:#fff;
+    color:#c5c5c5;
     background-color: rgb(20, 20, 20);
     height: 100%;
     padding:50px;
+    background-image: url('/assets/back1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container_child{
-    background-color: rgb(31, 31, 31);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 2rem;
     filter: drop-shadow(5px 5px 5px 5px rgba(0,0,0,0.3));
     box-shadow: 5px 5px 5px 3px rgba(0,0,0,0.3);
