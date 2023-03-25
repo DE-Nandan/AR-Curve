@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express			= require('express');
 const session			= require('express-session');
 const hbs				= require('express-handlebars');
@@ -17,8 +18,7 @@ const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
 const melodyRouter = require('./routes/melody');
 const exploreRouter = require('./routes/explore');
-mongoose.connect("mongodb://localhost:27017/node-auth-yt", {
-// mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect(process.env.db, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
