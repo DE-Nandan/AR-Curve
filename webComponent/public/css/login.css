@@ -5,7 +5,7 @@
     font-family: 'Lexend', sans-serif;
 }
 body{
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
     color:#fff;
 }
 .dark_mode{
@@ -18,7 +18,7 @@ body{
     height: 100vh;
 }
 #sign_up, #sign_in{
-    background-color: rgb(31, 31, 31);
+    background-color: rgba(15, 15, 15, 0.7);
     position: fixed;
     border-radius: 3rem;
     left: 250px;
@@ -42,10 +42,9 @@ body{
     margin-left: 30px;
     margin-bottom: 20px;
 }
-/* .inputg > input, input[type=text]{
-    color: #fff;
-    background-color: rgb(31, 31, 31);
-} */
+input[type="text"]{
+    color:#fff;
+}
 .left_part, .right_part{
     width: 450px; /* Half of the parent */
     height: inherit;
@@ -74,4 +73,8 @@ body{
     object-fit: cover;
     height: 500px;
     width: 500px;
+}
+h1{
+    color: #ffffff;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);
 }
