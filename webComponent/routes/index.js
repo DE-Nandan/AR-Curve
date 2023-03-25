@@ -25,7 +25,7 @@ router.get('/', isLoggedIn, async (req, res) => {
 	 console.log(x);
 
 	console.log(images[x]);
-	res.render("index", { title: req.user.username , usr: User ,image : images[x]});
+	res.render("index", { title: req.user.username ,image : images[x]});
 });
 
 
