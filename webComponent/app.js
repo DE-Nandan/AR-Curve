@@ -17,7 +17,8 @@ const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
 const melodyRouter = require('./routes/melody');
 const exploreRouter = require('./routes/explore');
-mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://localhost:27017/node-auth-yt", {
+// mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
