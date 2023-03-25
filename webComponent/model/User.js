@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
 		unique:true
 	},
 	favorites: [{
-        whatHaveYou: Number,
+        id: Number,
     }]
 },
 {

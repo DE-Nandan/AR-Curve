@@ -16,12 +16,8 @@ const {isLoggedOut} = require('./middleware/logCheck')
 const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const dashboardRouter = require('./routes/index');
-<<<<<<< HEAD
-=======
 const melodyRouter = require('./routes/melody');
 const exploreRouter = require('./routes/explore');
-mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
->>>>>>> a7d48806e4cd509e81f0d76b39d7d5afd8015a33
 
 mongoose.connect(process.env.db, {
 	useNewUrlParser: true,
