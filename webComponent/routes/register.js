@@ -5,9 +5,36 @@ const express = require('express')
 const User = require('../model/User');
 const bcrypt = require('bcrypt')
 const router = express.Router();
-const passport = require('passport');
+const passport			= require('passport');
+// router.get('/', async (req, res) => {
+// 	const exists = await User.exists({ username: "admin" });
+
+// 	if (exists) {
+
+// 		res.redirect('/login');
+// 		return;
+// 	};
+
+
+// 	bcrypt.genSalt(10, function (err, salt) {
+// 		if (err) return next(err);
+// 		bcrypt.hash("pass", salt, function (err, hash) {
+// 			if (err) return next(err);
+			
+// 			const newAdmin = new User({
+// 				username: "admin",
+// 				password: hash
+// 			});
+
+// 			newAdmin.save();
+
+// 			res.redirect('/login');
+// 		});
+// 	});
+// });
 router.post('/' , async (req,res) =>{
     console.log(req.body);
+
     /*
     Hashing --> bcrypt
     1.Collision should be improbalble
@@ -17,6 +44,7 @@ router.post('/' , async (req,res) =>{
     
     if (!username || typeof username !== 'string') {
 		return res.json({ status: 'error', error: 'Invalid username' })
+     
 	}
 
 	if (!plainTextPassword || typeof plainTextPassword !== 'string') {
@@ -25,11 +53,16 @@ router.post('/' , async (req,res) =>{
 
 	if (plainTextPassword.length < 5) {
 		//console.log('here');
+    
         return res.json({
 			status: 'error',
 			error: 'Password too small. Should be atleast 6 characters'
 		})
 	}
+    
+    
+    
+    
     
     const password = await bcrypt.hash(plainTextPassword,10);
     console.log(await bcrypt.hash(password,10))
@@ -54,9 +87,12 @@ router.post('/' , async (req,res) =>{
        }
        throw error
     }
+    
+    
     // // res.json handles everything itself like no need to define headers
     res.redirect('login')
 })
+
 
 router.get('/',async (req,res) =>{
     const response = {
@@ -66,5 +102,6 @@ router.get('/',async (req,res) =>{
     console.log(response);
     res.render('register',response)
  })
+
 
 module.exports = router;

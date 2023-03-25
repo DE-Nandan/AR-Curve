@@ -5,7 +5,7 @@ const {isLoggedOut} = require('../middleware/logCheck')
 const express = require('express')
 const User = require('../model/User');
 const router = express.Router();
-const passport = require('passport');
+const passport			= require('passport');
 
 router.get('/', isLoggedOut, (req, res) => {
 	const response = {

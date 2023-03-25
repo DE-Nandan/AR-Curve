@@ -8,6 +8,7 @@ function isLoggedOut(req, res, next) {
 	res.redirect('/');
 }
 
+
 module.exports = {
     isLoggedIn,
     isLoggedOut,

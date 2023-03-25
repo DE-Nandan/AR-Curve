@@ -1,34 +1,31 @@
-require('dotenv').config({path: __dirname + '/.env'});
-const express = require('express');
-const mongoose = require('mongoose');
-const passport = require('passport');
-const app = express();
-const expressLayouts = require('express-ejs-layouts');
+const express			= require('express');
+const session			= require('express-session');
+const hbs				= require('express-handlebars');
+const mongoose			= require('mongoose');
+const passport			= require('passport');
+const localStrategy		= require('passport-local').Strategy;
+const bcrypt			= require('bcrypt');
+const app				= express();
+const User               = require('./model/User');
+const expressLayouts = require('express-ejs-layouts')
 const methodOverride = require('method-override');
-const localStrategy	= require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
-const session = require('express-session');
-const hbs = require('express-handlebars');
-const User = require('./model/User');
-const flash = require('express-flash');
-
-const {isLoggedIn} = require('./middleware/logCheck');
-const {isLoggedOut} = require('./middleware/logCheck');
-//routes
-const dashboardRouter = require('./routes/index');
+const flash = require('express-flash')
+const {isLoggedIn} = require('./middleware/logCheck')
+const {isLoggedOut} = require('./middleware/logCheck')
 const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
-
-// Connect to database
-mongoose.connect("mongodb+srv://ashu:ashutosh@cluster0.qomjxb4.mongodb.net/?retryWrites=true&w=majority", {
+const dashboardRouter = require('./routes/index');
+mongoose.connect("mongodb://localhost:27017/node-auth-yt", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
 
+
+
 // Middleware
 app.set('view engine', 'ejs');
-app.set('views',__dirname+'/views');
-app.set('layout','layouts/layout');
+app.set('views',__dirname+'/views')
+app.set('layout','layouts/layout')
 app.use(expressLayouts)
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
@@ -59,7 +56,7 @@ passport.use(new localStrategy(function (username, password, done) {
 	User.findOne({ username: username }, function (err, user) {
 		if (err) return done(err);
 		if (!user) return done(null, false, { message: 'Incorrect username.' });
-		
+
 		bcrypt.compare(password, user.password, function (err, res) {
 			if (err) return done(err);
 			if (res === false) return done(null, false, { message: 'Incorrect password.' });
@@ -69,10 +66,9 @@ passport.use(new localStrategy(function (username, password, done) {
 	});
 }));
 
-// Routes
-app.use('/',dashboardRouter);
-app.use('/login',loginRouter);
-app.use('/register',registerRouter);
+app.use('/' ,dashboardRouter);
+app.use('/register' ,registerRouter);
+app.use('/login' ,loginRouter);
 
 
 app.get('/logout', function (req, res) {
@@ -80,7 +76,68 @@ app.get('/logout', function (req, res) {
 	res.redirect('/');
 });
 
-// Run the application at any port
+
+// ROUTES
+// app.get('/', isLoggedIn, (req, res) => {
+// 	//console.log(req.user);
+// 	res.render("index", { title: req.user.username });
+// });
+
+
+// app.get('/about', (req, res) => {
+// 	res.render("index", { title: "About" });
+// });
+
+// app.get('/login', isLoggedOut, (req, res) => {
+// 	const response = {
+// 		title: "Login",
+// 		error: req.query.error
+// 	}
+// 	console.log(response);
+
+// 	res.render('login', response);
+// });
+
+// app.post('/login', passport.authenticate('local', {
+// 	successRedirect: '/',
+// 	failureRedirect: '/login?error=true',
+// 	failureFlash: true
+// }));
+
+// app.get('/logout', function (req, res) {
+// 	req.logout();
+// 	res.redirect('/');
+// });
+
+// Setup our admin user
+
+// app.get('/setup', async (req, res) => {
+// 	const exists = await User.exists({ username: "admin" });
+
+// 	if (exists) {
+
+// 		res.redirect('/login');
+// 		return;
+// 	};
+
+
+// 	bcrypt.genSalt(10, function (err, salt) {
+// 		if (err) return next(err);
+// 		bcrypt.hash("pass", salt, function (err, hash) {
+// 			if (err) return next(err);
+			
+// 			const newAdmin = new User({
+// 				username: "admin",
+// 				password: hash
+// 			});
+
+// 			newAdmin.save();
+
+// 			res.redirect('/login');
+// 		});
+// 	});
+// });
+
 app.listen(5468, () => {
 	console.log("Listening on port 5468");
 });
