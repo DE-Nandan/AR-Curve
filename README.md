@@ -24,6 +24,7 @@ Website acts as a intro of our app and shows different
 
 
 ## Video Link
+[Video Link](https://drive.google.com/file/d/1aZEm35kdcvImdupOCr72d7xPorj_qQf7/view?usp=share_link)
 
 ## Presentation Link
 [PPT Link](https://docs.google.com/presentation/d/1Gk6m0QN8Wsr0BYXDq1FQGdbIKeVLzxZHxmSfsXWojH0/edit#slide=id.p)
