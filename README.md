@@ -9,10 +9,10 @@ Download ARCurve from [here](https://drive.google.com/file/d/1yaKfTfUuBlSFUq567f
 ## Table of Contents
 - [Introduction](#introduction)
 - [Video Link](#video-link)
-- [Presentation Link](presentation-link)
-- [Screenshots](screenshots)
-- [Technology Stack](technology-stack)
-- [Contributors](contributors)
+- [Presentation Link](#presentation-link)
+- [Screenshots](#screenshots)
+- [Technology Stack](#technology-stack)
+- [Contributors](#contributors)
 
 ## Introduction
 ARCurve - An app based on Augmented reality which is mapped through images.
