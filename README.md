@@ -5,7 +5,8 @@
 <img src="https://paas-s3-broker-prod-lon-2edbd31f-65e0-4d35-9755-fde7c3b1b292.s3.amazonaws.com/images/AR_VR_person_with_VR_headset.original.png">
 
 Download ARCurve from [here](https://drive.google.com/file/d/1yaKfTfUuBlSFUq567fS4NHGacqgxLnLw/view?usp=share_link).
-<strong>Acces App Porject Files</strong> [here](https://drive.google.com/drive/folders/1PKlxToWw_6dAT2w8AyqJi0DI-0CFhLe1?usp=share_link).
+<br/>
+**Acces App Porject Files** [here](https://drive.google.com/drive/folders/1PKlxToWw_6dAT2w8AyqJi0DI-0CFhLe1?usp=share_link).
 
 ## Table of Contents
 - [Introduction](#introduction)
