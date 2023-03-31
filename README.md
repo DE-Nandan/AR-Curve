@@ -6,7 +6,7 @@
 
 Download ARCurve from [here](https://drive.google.com/file/d/1yaKfTfUuBlSFUq567fS4NHGacqgxLnLw/view?usp=share_link).
 <br/>
-**Acces App Porject Files** [here](https://drive.google.com/drive/folders/1PKlxToWw_6dAT2w8AyqJi0DI-0CFhLe1?usp=share_link).
+**Acces App Project Files (5.03GB)** [here](https://drive.google.com/drive/folders/1PKlxToWw_6dAT2w8AyqJi0DI-0CFhLe1?usp=share_link).
 
 ## Table of Contents
 - [Introduction](#introduction)
